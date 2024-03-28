@@ -59,7 +59,7 @@ def id_edit_del_show(text):
 def read_file():
     try:
         array = []
-        file = open("notebook.txt", "r", encoding='utf-8')
+        file = open("notebook.csv", "r", encoding='utf-8')
         notebook = file.read().strip().split("\n")
         for n in notebook:
             split_n = n.split(';')
@@ -72,10 +72,10 @@ def read_file():
         return array
 
 def write_file(array, mode):
-    file = open("notebook.txt", mode='w', encoding='utf-8')
+    file = open("notebook.csv", mode='w', encoding='utf-8')
     file.seek(0)
     file.close()
-    file = open("notebook.txt", mode=mode, encoding='utf-8')
+    file = open("notebook.csv ", mode=mode, encoding='utf-8')
     for notebook in array:
         file.write(notepad.Note.to_string(notebook))
         file.write('\n')
