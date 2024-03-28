@@ -20,4 +20,4 @@
 
 модули блокнота - notepad.py
 
-хранение записей - notebook.txt
+хранение записей - notebook.csv
